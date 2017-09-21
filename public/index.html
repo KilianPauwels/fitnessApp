@@ -1,0 +1,82 @@
+<!doctype html>
+<html ng-app='myApp'>
+<head>
+	<!--angular and angular routing script-->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-route.js"></script>
+
+	<!--jquery script-->
+	<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+	<!-- bootstrap CDN -->
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+	<script src="angularRouting.js"></script>
+
+	<title>Best Fitness App</title>
+
+	<style type="text/css">
+		body {
+  			padding-top: 20px;
+  			padding-bottom: 20px;
+		}
+
+		.navbar-default {
+  			margin-bottom: 20px;
+  			background-color: #f5f5f5;
+		}
+		.footer {
+  			position: absolute;
+  			bottom: 0;
+  			width: 100%;
+  			padding-left: 20%;
+  			/* Set the fixed height of the footer here */
+  			height: 60px;
+  			line-height: 60px; /* Vertically center the text there */
+  			background-color: #f5f5f5;
+		}
+	</style>
+
+</head>
+<body>
+	<div class="container">
+		<nav vlass="navbar navbar-default">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#home"><span>Best Fitness App Ever</span></a>
+				</div>
+
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<li class="active"><a href="#home">Home <span class="sr-only">(current)</span></a></li>
+						<li><a href="#chest">Chest</a></li>
+						<li><a href="#back">Back</a></li>
+						<li><a href="#shoulders">Shoulders</a></li>
+						<li><a href="#legs">Legs/Arms</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</div>
+	<div class="container">
+		<div ng-view>
+		</div>
+	</div>
+	<footer class="footer">
+		Made by: Kilian Pauwels
+	</footer>
+</body>
+</html>
